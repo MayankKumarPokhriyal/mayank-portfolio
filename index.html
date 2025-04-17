@@ -9,66 +9,79 @@
     <style>
         body { font-family: 'Inter', sans-serif; }
         .section { scroll-margin-top: 80px; }
-        .hover-scale { transition: transform 0.3s; }
+        .hover-scale { transition: transform 0.3s ease-in-out; }
         .hover-scale:hover { transform: scale(1.05); }
+        .fade-in { opacity: 0; transition: opacity 0.5s ease-in; }
+        .fade-in.visible { opacity: 1; }
     </style>
 </head>
 <body class="bg-gray-100 text-gray-800">
     <!-- Navigation Bar -->
-    <nav class="bg-blue-300 text-white fixed w-full top-0 z-10 shadow-lg">
-        <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+    <nav class="bg-blue-400 text-white fixed w-full top-0 z-10 shadow-md">
+        <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
             <div class="text-xl font-bold">Mayank Kumar Pokhriyal</div>
-            <div class="space-x-4">
-                <a href="#about" class="hover:text-blue-100">About</a>
-                <a href="#education" class="hover:text-blue-100">Education</a>
-                <a href="#experience" class="hover:text-blue-100">Experience</a>
-                <a href="#skills" class="hover:text-blue-100">Skills</a>
-                <a href="#projects" class="hover:text-blue-100">Projects</a>
-                <a href="#achievements" class="hover:text-blue-100">Achievements</a>
-                <a href="#contact" class="hover:text-blue-100">Contact</a>
-                <a href="MayankKumarPokhriyalResume.pdf" class="bg-white text-blue-400 px-3 py-1 rounded hover:bg-blue-100" download>Resume</a>
+            <div class="space-x-6">
+                <a href="#about" class="hover:text-blue-200 transition-colors">About</a>
+                <a href="#summary" class="hover:text-blue-200 transition-colors">Summary</a>
+                <a href="#education" class="hover:text-blue-200 transition-colors">Education</a>
+                <a href="#experience" class="hover:text-blue-200 transition-colors">Experience</a>
+                <a href="#skills" class="hover:text-blue-200 transition-colors">Skills</a>
+                <a href="#projects" class="hover:text-blue-200 transition-colors">Projects</a>
+                <a href="#achievements" class="hover:text-blue-200 transition-colors">Achievements</a>
+                <a href="#contact" class="hover:text-blue-200 transition-colors">Contact</a>
+                <a href="MayankKumarPokhriyalResume.pdf" class="bg-white text-blue-400 px-4 py-2 rounded-full hover:bg-blue-100 hover-scale" download>Resume</a>
             </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
     <section class="bg-blue-50 min-h-screen flex items-center justify-center pt-16">
-        <div class="max-w-6xl mx-auto px-4 text-center">
-            <h1 class="text-5xl font-bold text-blue-400 mb-4">Mayank Kumar Pokhriyal</h1>
-            <p class="text-xl text-gray-600 mb-6">AI Engineer | Data Scientist | Innovator</p>
-            <a href="#contact" class="bg-blue-400 text-white px-6 py-3 rounded-lg hover:bg-blue-500 hover-scale">Get in Touch</a>
+        <div class="max-w-7xl mx-auto px-4 text-center fade-in">
+            <h1 class="text-5xl md:text-6xl font-bold text-blue-400 mb-4">Mayank Kumar Pokhriyal</h1>
+            <p class="text-xl md:text-2xl text-gray-600 mb-6">AI Engineer | Data Scientist</p>
+            <a href="#contact" class="bg-blue-400 text-white px-6 py-3 rounded-full hover:bg-blue-500 hover-scale transition-colors">Get in Touch</a>
         </div>
     </section>
 
     <!-- About Section -->
     <section id="about" class="section py-16 bg-white">
-        <div class="max-w-6xl mx-auto px-4">
+        <div class="max-w-7xl mx-auto px-4 fade-in">
             <h2 class="text-3xl font-bold text-blue-400 mb-6">About Me</h2>
             <p class="text-lg text-gray-600 leading-relaxed">
-                I'm an AI Engineer with 4+ years of experience in predictive modeling, machine learning, and big data pipelines. Originally from a serene mountainous hometown, I moved to New York to pursue a Master’s in Applied AI at Stevens Institute of Technology. My passion lies in leveraging AI to solve real-world problems, from fraud detection to sustainable agriculture. I aspire to transform my hometown into a self-sustaining ecosystem using AI-driven innovations like automated irrigation and renewable energy.
+                I'm an AI Engineer with over 5 years of experience in designing and deploying scalable AI/ML systems. Originally from a serene mountainous hometown, I moved to New York to pursue a Master’s in Applied AI at Stevens Institute of Technology. My passion lies in leveraging AI to solve complex problems, from fraud detection to sustainable agriculture. I aim to transform my hometown into a self-sustaining ecosystem using AI-driven innovations like automated irrigation and renewable energy.
+            </p>
+        </div>
+    </section>
+
+    <!-- Summary Section -->
+    <section id="summary" class="section py-16 bg-blue-50">
+        <div class="max-w-7xl mx-auto px-4 fade-in">
+            <h2 class="text-3xl font-bold text-blue-400 mb-6">Summary</h2>
+            <p class="text-lg text-gray-600 leading-relaxed">
+                AI Engineer and Data Scientist with 5+ years of experience at IBM and Kyndryl, driving the design and deployment of scalable, production-grade AI/ML systems. Expertise spans large language models (LLMs), deep learning, NLP, computer vision, generative AI, and predictive analytics. Skilled in full-stack ML development, including model training, MLOps (CI/CD/CT), and lifecycle management. Strong foundation in data engineering, statistical modeling, and algorithmic optimization to deliver high-impact, AI-powered automation and insights across diverse domains. Passionate about building intelligent, end-to-end pipelines that transform complex data into actionable, business-critical solutions.
             </p>
         </div>
     </section>
 
     <!-- Education Section -->
-    <section id="education" class="section py-16 bg-blue-50">
-        <div class="max-w-6xl mx-auto px-4">
+    <section id="education" class="section py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 fade-in">
             <h2 class="text-3xl font-bold text-blue-400 mb-6">Education</h2>
             <div class="space-y-6">
-                <div>
+                <div class="border-l-4 border-blue-400 pl-4 hover-scale">
                     <h3 class="text-xl font-semibold">Stevens Institute of Technology, Hoboken, NJ</h3>
-                    <p class="text-gray-600">Master of Science in Applied Artificial Intelligence, GPA: 3.7</p>
+                    <p class="text-gray-600">Master of Science in Applied Artificial Intelligence, GPA: 3.7/4</p>
                     <p class="text-gray-600">Jan 2025 – Dec 2026</p>
                     <p class="text-gray-600">Relevant Coursework: Deep Learning, NLP, Computer Vision, Reinforcement Learning</p>
                 </div>
-                <div>
+                <div class="border-l-4 border-blue-400 pl-4 hover-scale">
                     <h3 class="text-xl font-semibold">Birla Institute of Technology and Science, Pilani, India</h3>
-                    <p class="text-gray-600">Master of Technology in Data Science & Engineering, GPA: 7.5</p>
+                    <p class="text-gray-600">Master of Technology in Data Science & Engineering, GPA: 7.5/10</p>
                     <p class="text-gray-600">Sep 2020 – Sep 2022</p>
                 </div>
-                <div>
+                <div class="border-l-4 border-blue-400 pl-4 hover-scale">
                     <h3 class="text-xl font-semibold">Dr. A.P.J. Abdul Kalam Technical University, Lucknow, India</h3>
-                    <p class="text-gray-600">Bachelor of Technology in Computer Science and Engineering, GPA: 7.2</p>
+                    <p class="text-gray-600">Bachelor of Technology in Computer Science and Engineering, GPA: 7.2/10</p>
                     <p class="text-gray-600">Aug 2015 – Aug 2019</p>
                 </div>
             </div>
@@ -76,20 +89,20 @@
     </section>
 
     <!-- Work Experience Section -->
-    <section id="experience" class="section py-16 bg-white">
-        <div class="max-w-6xl mx-auto px-4">
+    <section id="experience" class="section py-16 bg-blue-50">
+        <div class="max-w-7xl mx-auto px-4 fade-in">
             <h2 class="text-3xl font-bold text-blue-400 mb-6">Work Experience</h2>
             <div class="space-y-8">
-                <div>
+                <div class="border-l-4 border-blue-400 pl-4 hover-scale">
                     <h3 class="text-xl font-semibold">Kyndryl (formerly IBM GTS), Bangalore, India</h3>
-                    <p class="text-gray-600 italic">AI/ML Engineer, Sep 2021 – Present</p>
+                    <p class="text-gray-600 italic">AI/ML Engineer, Sep 2021 – Jan 2025</p>
                     <ul class="list-disc ml-6 text-gray-600">
                         <li>Developed a fraud detection model using TensorFlow, improving accuracy by 22% for American Express.</li>
                         <li>Designed a credit default prediction system with XGBoost, reducing false positives by 15%.</li>
                         <li>Automated AWS Glue data pipelines, processing 10M+ transactions/day, cutting latency by 30%.</li>
                     </ul>
                 </div>
-                <div>
+                <div class="border-l-4 border-blue-400 pl-4 hover-scale">
                     <h3 class="text-xl font-semibold">IBM, Bangalore, India</h3>
                     <p class="text-gray-600 italic">Data Engineer, Aug 2019 – Sep 2021</p>
                     <ul class="list-disc ml-6 text-gray-600">
@@ -97,7 +110,7 @@
                         <li>Created Power BI dashboards to visualize $5M+ costs, enabling budget optimization.</li>
                     </ul>
                 </div>
-                <div>
+                <div class="border-l-4 border-blue-400 pl-4 hover-scale">
                     <h3 class="text-xl font-semibold">Misawite Technologies, Ghaziabad, India</h3>
                     <p class="text-gray-600 italic">Python Developer Intern, Jun 2018 – Aug 2018</p>
                     <ul class="list-disc ml-6 text-gray-600">
@@ -110,19 +123,19 @@
     </section>
 
     <!-- Skills Section -->
-    <section id="skills" class="section py-16 bg-blue-50">
-        <div class="max-w-6xl mx-auto px-4">
+    <section id="skills" class="section py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 fade-in">
             <h2 class="text-3xl font-bold text-blue-400 mb-6">Skills</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-                <div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="bg-blue-50 p-4 rounded-lg shadow-sm hover-scale">
                     <h3 class="text-lg font-semibold text-blue-400">AI/ML</h3>
                     <p class="text-gray-600">TensorFlow, PyTorch, NLP, Neural Networks, Predictive Modeling, LLMs (GPT-3.5/4)</p>
                 </div>
-                <div>
+                <div class="bg-blue-50 p-4 rounded-lg shadow-sm hover-scale">
                     <h3 class="text-lg font-semibold text-blue-400">Tools</h3>
                     <p class="text-gray-600">Python, PySpark, AWS, Hadoop, Power BI, SQL, Git</p>
                 </div>
-                <div>
+                <div class="bg-blue-50 p-4 rounded-lg shadow-sm hover-scale">
                     <h3 class="text-lg font-semibold text-blue-400">Data Engineering</h3>
                     <p class="text-gray-600">Data Pipelines, ETL, Statistical Analysis, Azure, Big Data</p>
                 </div>
@@ -131,29 +144,29 @@
     </section>
 
     <!-- Projects Section -->
-    <section id="projects" class="section py-16 bg-white">
-        <div class="max-w-6xl mx-auto px-4">
+    <section id="projects" class="section py-16 bg-blue-50">
+        <div class="max-w-7xl mx-auto px-4 fade-in">
             <h2 class="text-3xl font-bold text-blue-400 mb-6">Projects</h2>
             <div class="space-y-6">
-                <div class="border-l-4 border-blue-400 pl-4 hover-scale">
+                <div class="bg-white p-4 rounded-lg shadow-sm hover-scale">
                     <h3 class="text-xl font-semibold">NLP-Based Sentiment Analysis Engine</h3>
                     <p class="text-gray-600 italic">Python, BERT</p>
                     <p class="text-gray-600">Fine-tuned BERT model for real-time sentiment scoring (92% F1-score) on Twitter data.</p>
-                    <a href="https://github.com/kayarkkurarkuknral" class="text-blue-400 hover:underline">View on GitHub</a>
+                    <a href="https://github.com/mayankkumarpokhriyal" class="text-blue-400 hover:underline">View on GitHub</a>
                 </div>
-                <div class="border-l-4 border-blue-400 pl-4 hover-scale">
+                <div class="bg-white p-4 rounded-lg shadow-sm hover-scale">
                     <h3 class="text-xl font-semibold">Autonomous Vehicle Simulation</h3>
                     <p class="text-gray-600 italic">PyTorch, Carla</p>
                     <p class="text-gray-600">Trained a reinforcement learning agent using PyTorch to navigate Carla Simulator environments.</p>
-                    <a href="https://kaggle.com/mayankkumarpekhnyal" class="text-blue-400 hover:underline">View on Kaggle</a>
+                    <a href="https://kaggle.com/mayankkumarpokhriyal" class="text-blue-400 hover:underline">View on Kaggle</a>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Achievements Section -->
-    <section id="achievements" class="section py-16 bg-blue-50">
-        <div class="max-w-6xl mx-auto px-4">
+    <section id="achievements" class="section py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 fade-in">
             <h2 class="text-3xl font-bold text-blue-400 mb-6">Achievements</h2>
             <ul class="list-disc ml-6 text-gray-600 space-y-2">
                 <li><strong>Smart India Hackathon 2017, Government of India (2017):</strong> Led a team to build an AI-driven waste segregation prototype, winning recognition.</li>
@@ -163,53 +176,75 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="section py-16 bg-white">
-        <div class="max-w-6xl mx-auto px-4">
+    <section id="contact" class="section py-16 bg-blue-50">
+        <div class="max-w-7xl mx-auto px-4 fade-in">
             <h2 class="text-3xl font-bold text-blue-400 mb-6">Contact Me</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <div>
-                    <p class="text-gray-600 mb-4">Feel free to reach out for collaborations or opportunities!</p>
-                    <p class="text-gray-600"><strong>Email:</strong> <a href="mailto:mayankpokhriyal96@gmail.com" class="text-blue-400 hover:underline">mayankpokhriyal96@gmail.com</a></p>
-                    <p class="text-gray-600"><strong>Phone:</strong> (201) 492-7298</p>
-                    <div class="flex space-x-4 mt-4">
-                        <a href="https://linkedin.com/in/mayank-kumar-pokhriyal" class="text-blue-400 hover:text-blue-600"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M19 3a2 2 0 012 2v14a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h14m-.5 15.5v-5.3a3.26 3.26 0 00-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 011.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 001.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 00-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg></a>
-                        <a href="https://github.com/kayarkkurarkuknral" class="text-blue-400 hover:text-blue-600"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2A10 10 0 002 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75.82.8-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.09 2.75-.82 2.75-.82.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0012 2z"/></svg></a>
-                        <a href="https://kaggle.com/mayankkumarpekhnyal" class="text-blue-400 hover:text-blue-600"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M7.75 2.39c-.24-.33-.7-.42-1.06-.2-.35.22-.5.65-.36 1.04l2.07 5.24H5.5c-.55 0-1 .45-1 1s.45 1 1 1h3.45l-2.07 5.24c-.14.39.01.82.36 1.04.36.22.82.13 1.06-.2l5.25-7.24h-1.7c-.55 0-1-.45-1-1s.45-1 1-1h1.45l-2.07-5.24c-.14-.39-.56-.54-.95-.4z"/></svg></a>
+                    <p class="text-gray-600 mb-4">I'm excited to collaborate on AI-driven projects or explore new opportunities. Reach out to connect!</p>
+                    <p class="text-gray-600 mb-2"><strong>Email:</strong> <a href="mailto:mayankpokhriyal96@gmail.com" class="text-blue-400 hover:underline">mayankpokhriyal96@gmail.com</a></p>
+                    <p class="text-gray-600 mb-4"><strong>Phone:</strong> (201) 492-7298</p>
+                    <div class="flex space-x-4">
+                        <a href="https://linkedin.com/in/mayank-kumar-pokhriyal" class="text-blue-400 hover:text-blue-600 hover-scale">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M19 3a2 2 0 012 2v14a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h14m-.5 15.5v-5.3a3.26 3.26 0 00-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 011.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 001.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 00-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
+                        </a>
+                        <a href="https://github.com/mayankkumarpokhriyal" class="text-blue-400 hover:text-blue-600 hover-scale">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2A10 10 0 002 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75.82.8-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.09 2.75-.82 2.75-.82.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0012 2z"/></svg>
+                        </a>
+                        <a href="https://www.credly.com/users/mayank-kumar-pokhriyal/badges" class="text-blue-400 hover:text-blue-600 hover-scale">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2a10 10 0 00-10 10c0 5.52 4.48 10 10 10s10-4.48 10-10A10 10 0 0012 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm0-14c-3.31 0-6 2.69-6 6s2.69 6 6 6 6-2.69 6-6-2.69-6-6-6zm0 10c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4z"/></svg>
+                        </a>
+                        <a href="https://kaggle.com/mayankkumarpokhriyal" class="text-blue-400 hover:text-blue-600 hover-scale">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M7.75 2.39c-.24-.33-.7-.42-1.06-.2-.35.22-.5.65-.36 1.04l2.07 5.24H5.5c-.55 0-1 .45-1 1s.45 1 1 1h3.45l-2.07 5.24c-.14.39.01.82.36 1.04.36.22.82.13 1.06-.2l5.25-7.24h-1.7c-.55 0-1-.45-1-1s.45-1 1-1h1.45l-2.07-5.24c-.14-.39-.56-.54-.95-.4z"/></svg>
+                        </a>
                     </div>
                 </div>
                 <form class="space-y-4">
                     <div>
                         <label for="name" class="block text-sm font-medium text-gray-700">Name</label>
-                        <input type="text" id="name" class="w-full p-2 border border-gray-300 rounded focus:ring-blue-400 focus:border-blue-400">
+                        <input type="text" id="name" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-blue-400 focus:border-blue-400">
                     </div>
                     <div>
                         <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
-                        <input type="email" id="email" class="w-full p-2 border border-gray-300 rounded focus:ring-blue-400 focus:border-blue-400">
+                        <input type="email" id="email" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-blue-400 focus:border-blue-400">
                     </div>
                     <div>
                         <label for="message" class="block text-sm font-medium text-gray-700">Message</label>
-                        <textarea id="message" rows="4" class="w-full p-2 border border-gray-300 rounded focus:ring-blue-400 focus:border-blue-400"></textarea>
+                        <textarea id="message" rows="5" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-blue-400 focus:border-blue-400"></textarea>
                     </div>
-                    <button type="submit" class="bg-blue-400 text-white px-6 py-2 rounded-lg hover:bg-blue-500 hover-scale">Send Message</button>
+                    <button type="submit" class="bg-blue-400 text-white px-6 py-3 rounded-full hover:bg-blue-500 hover-scale transition-colors">Send Message</button>
                 </form>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-blue-300 text-white py-6">
-        <div class="max-w-6xl mx-auto px-4 text-center">
+    <footer class="bg-blue-400 text-white py-6">
+        <div class="max-w-7xl mx-auto px-4 text-center">
             <p>© 2025 Mayank Kumar Pokhriyal. All rights reserved.</p>
             <div class="flex justify-center space-x-4 mt-2">
-                <a href="https://linkedin.com/in/mayank-kumar-pokhriyal" class="hover:text-blue-100">LinkedIn</a>
-                <a href="https://github.com/kayarkkurarkuknral" class="hover:text-blue-100">GitHub</a>
-                <a href="https://kaggle.com/mayankkumarpekhnyal" class="hover:text-blue-100">Kaggle</a>
+                <a href="https://linkedin.com/in/mayank-kumar-pokhriyal" class="hover:text-blue-200">LinkedIn</a>
+                <a href="https://github.com/mayankkumarpokhriyal" class="hover:text-blue-200">GitHub</a>
+                <a href="https://www.credly.com/users/mayank-kumar-pokhriyal/badges" class="hover:text-blue-200">Credly</a>
+                <a href="https://kaggle.com/mayankkumarpokhriyal" class="hover:text-blue-200">Kaggle</a>
             </div>
         </div>
     </footer>
 
-    <!-- JavaScript for Form Submission (Placeholder) -->
+    <!-- JavaScript for Fade-In Animation and Form Submission -->
     <script>
+        // Fade-in animation on scroll
+        const fadeIns = document.querySelectorAll('.fade-in');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+        fadeIns.forEach(el => observer.observe(el));
+
+        // Form submission placeholder
         document.querySelector('form').addEventListener('submit', (e) => {
             e.preventDefault();
             alert('Form submitted! (This is a placeholder; connect to a backend for full functionality.)');
